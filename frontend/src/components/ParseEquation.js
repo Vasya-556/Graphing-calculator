@@ -1,9 +1,5 @@
-function ParseEquation(){
-    return (
-        <div>
-
-        </div>
-    );
+function parseEquation(equation) {
+    
 }
 
-export default ParseEquation;
+export default parseEquation;

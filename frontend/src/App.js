@@ -7,7 +7,7 @@ function App() {
     
     <div>
       <Header />
-      <CoordinateSystem func={x => x}/>
+      <CoordinateSystem func={Math.cos}/>
     </div>
   );
 }
