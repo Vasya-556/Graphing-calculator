@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Style.css';
+import Numpad from './Numpad';
 
 function Footer(){
     const [isOpen, setIsOpen] = useState(false);
@@ -14,8 +15,7 @@ function Footer(){
                 {isOpen ? 'Hide' : 'Show'} Footer
             </button>
             <div className={`footer-content ${isOpen ? 'footer-open' : ''}`}>
-                {/* Content of the footer */}
-                Footer Content
+                <Numpad/>
             </div>
         </div>
     );
