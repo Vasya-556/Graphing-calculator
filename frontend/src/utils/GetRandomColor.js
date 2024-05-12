@@ -1,6 +1,5 @@
 export function GetRandomColor() {
     var letters = '0123456789ABCDEF';
-    var color = '#';
     var randomColors = [];
     
     // Generate 15 random colors
