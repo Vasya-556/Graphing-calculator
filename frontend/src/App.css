@@ -1,0 +1,251 @@
+:root {
+    --primary-color: #2F27CE;
+    --secondary-color: #DDDBFF;
+    --font-color: #050316;
+    --bg-color: #FBFBFE;
+    --accent-color: #443DFF;
+}
+
+[data-theme="dark"]{
+    --primary-color: #3A31D8;
+    --secondary-color: #020024;
+    --font-color: #EAE9FC;
+    --bg-color: #010104;
+    --accent-color: #0600C2;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: var(--secondary-color); /* Example background color */
+    z-index: 999; /* Ensure the header stays on top */
+    color: var(--accent-color);
+    padding-left: 150px;
+}
+
+  
+.title-container {
+    flex-grow: 1;
+    text-align: center;
+}
+  
+.button-container {
+    display: flex;
+}
+  
+.spacer {
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
+body {
+    margin: 0;
+    width: 98vw;
+    height: 95vh;
+}
+
+.footer-buttons {
+    position: fixed;
+    bottom: 30px; /* Adjust distance from bottom as needed */
+    right: 50px; /* Adjust distance from right as needed */
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+}
+
+.full-page-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 35px;
+}
+
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 15px;
+}
+
+.slider:before{
+    position: absolute;
+    content: '';
+    height: 25px;
+    width: 25px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider{
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before{
+    transform: translateX(25px);
+}
+
+.sidebar {
+    width: 300px;
+    height: 100%;
+    background-color: var(--primary-color);
+    position: fixed;
+    top: 0;
+    left: -300px; /* Sidebar initially hidden */
+    transition: left 0.65s ease;
+    z-index: 1000; /* Higher z-index to be above the content */
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.toggle-btn {
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px; /* Adjust this value to position the button */
+    z-index: 1001; /* Ensure the button is above the sidebar */
+    transition: left 0.65s ease, transform 0.5s ease;
+    width: 40px;
+    background-color: white;
+}
+
+.toggle-btn.open {
+    left: 310px;
+    transform: rotate(-90deg) /* Adjust this value to move button with the sidebar */
+}
+
+
+.Download-button{
+    background-color: var(--secondary-color);
+    border: none;
+    width: 35px;
+}
+
+.Download-button svg path {
+    fill: var(--font-color);
+}
+
+.EntryList {
+    display: flex;
+  flex-direction: column;
+  margin: 5px;
+  margin-left: 15px;
+}
+
+.EntryList h2 {
+    color: var(--font-color);
+}
+
+.Entry {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.Entry input {
+    height: 35px;
+}
+
+.Delete-button {
+    border: none;
+    background-color: transparent;
+    width: 35px;
+    height: 35px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.Color-button {
+    width: 35px;
+    height: 35px;
+    border: 2px solid #000000;
+}
+
+.Reset-button {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Minus-button {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.Plus-button {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Help-button {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Help-window {
+    width: 300px;
+    height: 250px;
+    /* background: '#fff',
+            border: '1px solid #ccc',
+            borderRadius: '5px',
+            boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+            padding: '10px',
+            zIndex: '999', */
+    background-color: var(--secondary-color);
+    border: 1px solid var(--font-color);
+    color: var(--font-color);
+}
