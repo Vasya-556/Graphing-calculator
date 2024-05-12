@@ -1,13 +1,21 @@
 :root {
-    --primary-color: #2F27CE;
-    --secondary-color: #DDDBFF;
+    --primary-color: #6897FE;
+    --secondary-color: #2F27CE;
     --font-color: #050316;
     --bg-color: #FBFBFE;
     --accent-color: #443DFF;
 }
 
+/* :root {
+    --primary-color: #2F27CE;
+    --secondary-color: #DDDBFF;
+    --font-color: #050316;
+    --bg-color: #FBFBFE;
+    --accent-color: #443DFF;
+} */
+
 [data-theme="dark"]{
-    --primary-color: #3A31D8;
+    --primary-color: #013198;
     --secondary-color: #020024;
     --font-color: #EAE9FC;
     --bg-color: #010104;
@@ -29,7 +37,7 @@ header {
     padding: 10px 20px; /* Adjust padding as needed */
     background-color: var(--secondary-color); /* Example background color */
     z-index: 999; /* Ensure the header stays on top */
-    color: var(--accent-color);
+    color: var(--font-color);
     padding-left: 150px;
 }
 
@@ -165,8 +173,12 @@ input:checked + .slider:before{
   margin-left: 15px;
 }
 
-.EntryList h2 {
+.EntryList h3 {
     color: var(--font-color);
+}
+
+.EntryList svg path {
+    fill: var(--font-color);
 }
 
 .Entry {
