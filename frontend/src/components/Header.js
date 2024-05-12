@@ -1,14 +1,21 @@
 import LightDarkModeToggle from "./LightDarkModeToggle";
 import DownloadButton from "./DownloadButton";
+import HelpMenu from "./HelpMenu";
+import '../App.css';
 
 function Header(){
     return (
         <header>
-            <div>
-                <h1>123</h1>
+            <div className="title-container">
+                <h1>Mathix</h1>
             </div>
-            <DownloadButton/>
-            <LightDarkModeToggle/>
+            <div className="button-container">
+                <LightDarkModeToggle/>
+                <div className="spacer" />
+                <HelpMenu/>
+                <div className="spacer" />
+                <DownloadButton/>
+            </div>
         </header>
     );
 }
