@@ -64,6 +64,23 @@ function CoordinateSystem({ equations }) {
         setData(GenerateData(xValues, equations));
     }, [equations, axisRanges]);
 
+    const [theme, setTheme] = useState('');
+
+    useEffect(() => {
+        const updateTheme = () => {
+            setTheme(document.body.getAttribute('data-theme'));
+        };
+
+        updateTheme();
+
+        const observer = new MutationObserver(updateTheme);
+        observer.observe(document.body, { attributes: true, attributeFilter: ['data-theme'] });
+
+        return () => {
+            observer.disconnect();
+        };
+    }, []);
+
     const handlePlotlyRelayout = (event) => {
         const newAxisRanges = { ...axisRanges };
 
@@ -98,19 +115,30 @@ function CoordinateSystem({ equations }) {
         });
     };
 
+    const plotBgColor = theme === 'dark' ? '#262625' : 'white';
+    const axisColor = theme === 'dark' ? 'white' : 'black';
+    const gridColor = theme === 'dark' ? 'lightgray' : '';
+
     const layout = {
         xaxis: {
             range: axisRanges.x,
             dtick: 1,
+            color: axisColor,
+            gridcolor: gridColor
         },
         yaxis: {
             range: axisRanges.y,
             dtick: 1,
+            color: axisColor,
+            zerolinewidth: 2,
+            gridcolor: gridColor
         },
         autosize: false,
         width: window.innerWidth,
         height: window.innerHeight,
         ticklabelposition: 'inside',
+        paper_bgcolor: plotBgColor,
+        plot_bgcolor: plotBgColor,
         dragmode: 'pan'
     };
 

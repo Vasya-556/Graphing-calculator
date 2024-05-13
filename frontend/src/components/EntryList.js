@@ -53,7 +53,7 @@ const EntryList = ({ onDataUpdate }) => {
             </button>
             <button 
             className='Color-button' 
-            style={{ backgroundColor: entry.color || '#000000' }} 
+            style={{ backgroundColor: entry.color || '#9c9b9a' }} 
             onClick={() => handlePress(index)}>
 
             </button>

@@ -13,7 +13,7 @@ function SideBar({onDataReceived}){
     const handleDataUpdate = (newData) => {
         const equations = newData.map((entry) => ({
             equation: ParseEquation(entry.value),
-            color: entry.color || '#000000'
+            color: entry.color || '#9c9b9a'
           }));
           onDataReceived(equations);
     };
