@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import CoordinateSystem from './components/CoordinateSystem';
 import Header from './components/Header';
 import SideBar from './components/SideBar';
+import Footer from './components/Footer';
 import './App.css';
-import 'font-awesome/css/font-awesome.min.css';
+// import 'font-awesome/css/font-awesome.min.css';
 
 function App() {
   const [equations, setEquations] = useState([]);
@@ -26,6 +27,7 @@ function App() {
       <Header />
       <SideBar onDataReceived={receiveDataFromSideBar} />
       <CoordinateSystem equations={equations}/>
+      <Footer />
     </div>
   );
 }
