@@ -27,7 +27,7 @@ function App() {
       <Header />
       <SideBar onDataReceived={receiveDataFromSideBar} />
       <CoordinateSystem equations={equations}/>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
